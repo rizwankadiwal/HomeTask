@@ -14,12 +14,19 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
+    unless session[:signed_in] == true
+      redirect_to '/user.html'
+    end
     @task = Task.new
   end
 
   # GET /tasks/1/edit
   def edit
+    unless session[:signed_in] == true
+      redirect_to '/user.html'
+    end
   end
+
 
   # POST /tasks
   # POST /tasks.json
