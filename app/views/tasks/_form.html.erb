@@ -16,6 +16,13 @@
     <%= form.text_field :task_name, id: :task_task_name %>
   </div>
 
+  <div class="field">
+    <%= form.label :user_name %>
+    <%= form.text_field :user_name, id: :task_user_name, readonly: true, value: session[:username] %>
+  </div>
+
+
+
   <div class="actions">
     <%= form.submit %>
   </div>
