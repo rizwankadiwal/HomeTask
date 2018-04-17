@@ -1,0 +1,29 @@
+<p>Build website that allows users to create tasks. On each task allow users the ability to create
+  comments. No user authentication is required.</p>
+<p>Use Ruby on rails, html5, css3, javascript of your choice</p>
+<p>Tasks</p>
+<ul>
+  <li> Users can create, view and edit tasks</li>
+  <li>There should be a task index page where you can sort by task description or creation
+    date.</li>
+  <li>When viewing a single task users should be able to view all existing comments and have
+    the ability to add new comments using AJAX requests</li>
+  <li>Users should not be able to delete a task</li>
+</ul>
+<br>
+<p>Comments</p>
+<ul>
+  <li>Comments will be anonymous</li>
+  <li>users can create comments</li>
+  <li>Users should not be able to delete or edit comments</li>
+</ul>
+
+
+<p><em>Documentation</em></p>
+<ul>
+  <li>Users in this application were created by using session.</li>
+  <li>In order to create task, username session is created by login page(but without password).</li>
+  <li>Since authentication was not required, user can only edit their tasks i.e. if their username session matches author of task.</li>
+  <li>User can now sort task by Task name, creation date and author.</li>
+  <li>Use <em>rails db:seed to load all data(faker gem)</em></li>
+</ul>

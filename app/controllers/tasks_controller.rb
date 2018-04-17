@@ -1,15 +1,20 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
+  layout 'application/application'
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+    @tasks = Task.order(params[:sort])
   end
 
   # GET /tasks/1
   # GET /tasks/1.json
   def show
+    @task = Task.find(params[:id])
+    @commentable = @task
+    @comments = @commentable.comments
+    @comment = Comment.new
   end
 
   # GET /tasks/new

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   #protect_from_forgery with: :exception
 
+  layout 'application/application'
   def login
     session[:signed_in] = true
     session[:username] = params[:username]
@@ -12,4 +13,7 @@ class ApplicationController < ActionController::Base
     redirect_to tasks_url
   end
 
+  def index
+
+  end
 end
